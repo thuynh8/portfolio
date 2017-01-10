@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio | Tyler Huynh - Full Stack Web Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Tyler Huynh">
+    <meta name="description" content="Tyler Huynh Full Stack Web Developer Portfolio">
+    <meta name="keywords" content="Tyler Huynh, Web Developer, Full Stack, HTML5, CSS3, JavaScript, AngularJS, Python">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="icon" href="images/favicon.ico">
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+
+    <script src="https://use.fontawesome.com/409e734741.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/gmap.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/typed.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><img src="images/logo.png" class="logo img-responsive"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#about" class="hvr-underline-from-center">About</a></li>
+                    <li><a href="#portfolio" class="hvr-underline-from-center">Portfolio</a></li>
+                    <li><a href="#contact" class="hvr-underline-from-center">Contact</a></li>
+                    <li><a href="files/resume.pdf" class="hvr-underline-from-center">Resume</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div ng-app="myApp" ng-controller="myCtrl">
+        <!-- About Section -->
+        <section class="colored-block bg-dawn">
+            <div id="about" class="container text-center">
+                <h1 class="greeting margin-top-75 margin-bottom-65">
+                    <span style="color:#ffA500;">Hi,</span> my name is <span style="color:#01579b;">Tyler</span><br>
+                    <span class="element"></span>
+                </h1>
+                <div class="row">
+                    <div class="col-xs-3 col-sm-4 col-md-5"></div>
+                    <div class="col-xs-6 col-sm-4 col-md-2 margin-bottom-25">
+                        <img src="images/tan.jpg" alt="Profile Pic" class="img-circle img-responsive">
+                    </div>
+                    <div class="col-xs-3 col-sm-4 col-md-5"></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 intro">
+                        <p><sup><i class="fa fa-quote-left"></i></sup>
+                            Hi, my name is Tyler Huynh. I'm a passionate web developer with knowledge
+                            in both front-end and back-end development. I love learning new things,
+                            working with new technologies, and tackling new challenges everyday.
+                            In my free time, I enjoy traveling, reading books, and everything about
+                            the Cosmos.
+                            <sup><i class="fa fa-quote-right"></i></sup></p>
+                    </div>
+                </div>
+                <!-- Skills -->
+                <div class="row margin-bottom-15">
+                    <h3>What I'm Good At</h3><hr class="hr-bold">
+                    <div class="hvr-float-shadow col-xs-3 col-sm-3 col-md-3 margin-bottom-10" ng-repeat="x in skills">
+                        <i class="fa {{x.faName}} fa-2x" style="color:{{x.faColor}}"></i><br>
+                        <i class="fa fa-caret-down"></i><br>
+                        <strong>{{x.name}}</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section class="colored-block bg-grey">
+            <div id="portfolio" class="container text-center padding-top-40">
+                <h3 style="color:#000000;">My Portfolio</h3><hr class="hr-bold">
+                <div class="row">
+                    <div class="col-md-4" ng-repeat="x in projects">
+                        <a href="#" data-toggle="modal" data-target="#{{x.id}}">
+                            <div class="thumbnail">
+                                <div class="thumbnail-img"><img src={{x.pic}} alt="{{x.name}} Project Image" class="img-responsive"></div>
+                                <hr>
+                                <h5 class="text-center">{{x.name}}</h5>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Open a pop up window when a project was clicked -->
+        <div id={{x.id}} class="modal fade" role="dialog" ng-repeat="x in projects">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true"><i class="fa fa-times"></i></span>
+                        </button>
+                        <h3 class="text-center">{{x.name}}</h3>
+                    </div>
+                    <div class="modal-body">
+                        <img src={{x.pic}} class="img-responsive"><br>
+                        <div class="text-center">
+                            <a href="{{x.link}}"><button class="btn btn-default margin-bottom-10" type="button">
+                                <i class="fa fa-globe fa-fw"></i>Visit Website</button></a>
+                            <a href="{{x.git}}"><button class="btn btn-default margin-bottom-10" type="button">
+                                <i class="fa fa-github fa-fw"></i>Visit Github</button></a>
+                        </div>
+                        <p style="font-size:16px;" class="text-left">{{x.description}}</p>
+                    </div>
+                    <div class="modal-footer">
+                        <div style="display:inline-block;" ng-repeat="t in x.tools">
+                            <span class="label label-success" style="color:#000000;">{{t}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <section class="colored-block bg-titanium">
+            <div id="contact" class="container text-center padding-top-40">
+                <h3>Contact Me</h3><hr class="hr-bold">
+                <div class="row margin-bottom-15">
+                    <div class="col-md-6 text-left">
+                        <form method="POST" action="http://formspree.io/tylerhuynh100@gmail.com">
+                            <div class="form-group">
+                                <label for="visitorName">Name:</label>
+                                <input type="text" name="name" class="form-control" id="visitorName">
+                            </div>
+                            <div class="form-group">
+                                <label for="visitorEmail">Email:</label>
+                                <input type="email" name="email" class="form-control" id="visitorEmail">
+                            </div>
+                            <div class="form-group">
+                                <label for="visitorMessage">Message:</label>
+                                <textarea type="text" name="message" class="form-control" id="visitorMessage"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-default"><i class="fa fa-paper-plane"></i>
+                                Send Message</button>
+                        </form>
+                    </div>
+                    <div class="col-md-6 margin-bottom-15">
+                        <div id="map"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-3">Copyright <i class="fa fa-copyright"></i> 2017 Tyler Huynh</div>
+                <div class="col-md-9">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <a href="https://github.com/thuynh8"><i class="fa fa-github-alt fa-fw fa-2x"></i>Find me on Github</a>
+                        </div>
+                        <div class="col-md-3">
+                            <a href="https://www.linkedin.com/in/tylerhuynh"><i class="fa fa-linkedin fa-fw fa-2x"></i>View my LinkedIn profile</a>
+                        </div>
+                        <div class="col-md-3">
+                            <a href="#"><i class="fa fa-twitter fa-fw fa-2x"></i>Follow me on Twitter</a>
+                        </div>
+                        <div class="col-md-3">
+                            <a href="mailto:tylerhuynh100@gmail.com" target="_top"><i class="fa fa-envelope-o fa-fw fa-2x"></i>Email Me</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        $(function(){
+            $(".element").typed({
+                strings: ["I'm a <span style='color:#263238;'>Full Stack Web Developer</span> ^500",
+                    "Welcome to <span style='color:#b71c1c;'>My Page</span>"],
+                typeSpeed: 1
+            });
+        });
+    </script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxL8qkUOMhWz7ajinm7xXhSjFCvX5zc2E&callback=initMap">
+    </script>
+</body>
+</html>
