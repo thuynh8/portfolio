@@ -7,15 +7,26 @@ var app = angular.module("myApp", []);
 app.controller('myCtrl', function($scope) {
     $scope.skills = [
         {name: "HTML5", faName: "fa-html5", faColor: "#e44d26;"},
-        {name: "CSS3", faName: "fa-css3", faColor: "#185aa8;"},
+        {name: "CSS3", faName: "fa-css3", faColor: "#1E90FF;"},
         {name: "JavaScript", faName: "fa-braille", faColor: "#1de9b6;"},
         {name: "Bootstrap", faName: "fa-life-saver", faColor: "#5a4181;"},
         {name: "Python", faName: "fa-code", faColor: "#00b0ff;"},
-        {name: "AngularJS", faName: "fa-cogs", faColor: "#dd1b16;"},
-        {name: "AJAX", faName: "fa-server", faColor: "#5B5EA6;"},
-        {name: "SQL", faName: "fa-database", faColor: "#a33f6b;"}
+        {name: "AngularJS", faName: "fa-cogs", faColor: "#FF0000;"},
+        {name: "AJAX", faName: "fa-server", faColor: "#9370DB;"},
+        {name: "SQL", faName: "fa-database", faColor: "#DB7093;"}
     ];
     $scope.projects = [
+        {
+            name: "Broadway",
+            id: "p4",
+            pic: "images/broadway.png",
+            git: "https://github.com/thuynh8/broadway",
+            link: "https://thuynh8.github.io/broadway/",
+            description: "In this project, I created a web site for broadway, a fictional web" +
+            " design agency. Besides jQuery, I used animate.css and aos.css to enhance the "  +
+            "look of the website and improve user experience.",
+            tools: ["HTML5", "CSS3", "Bootstrap", "jQuery", "aos.css", "animate.css"]
+        },
         {
             name: "Linux Server Configuration",
             id: "p3",
@@ -45,6 +56,12 @@ app.controller('myCtrl', function($scope) {
             description: "Developed a web application that provides a list of items within a variety of categories" +
             " and integrate third party user registration and authentication.",
             tools: ["Flask", "SQLAlchemy", "Google and Facebook APIs & Oauth2"]
+        }
+    ];
+    $scope.tags = [
+        {
+            items: ["Web", "Developer", "Freelance", "Html5", "Css3", "JavaScript", "jQuery", "AngularJS", "Bootstrap",
+            "Python", "SQL", "Database", "Relational", "Ajax"]
         }
     ];
 })

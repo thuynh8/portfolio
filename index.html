@@ -10,6 +10,8 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
     <link rel="icon" href="images/favicon.ico">
 
     <!--[if lt IE 9]>
@@ -24,7 +26,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/typed.js"></script>
 </head>
-<body>
+<body ng-app="myApp" ng-controller="myCtrl">
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -33,7 +35,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#"><img src="images/logo.png" class="logo img-responsive"></a>
+                <a class="navbar-brand" href="#"><img src="images/logo.png" class="logo img-responsive" alt="Logo"></a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
@@ -45,9 +47,9 @@
             </div>
         </div>
     </nav>
-    <div ng-app="myApp" ng-controller="myCtrl">
+    <div>
         <!-- About Section -->
-        <section class="colored-block bg-dawn">
+        <section class="colored-block blend-gradient">
             <div id="about" class="container text-center">
                 <h1 class="greeting margin-top-75 margin-bottom-65">
                     <span style="color:#ffA500;">Hi,</span> my name is <span style="color:#01579b;">Tyler</span><br>
@@ -87,7 +89,7 @@
         <section class="colored-block bg-grey">
             <div id="portfolio" class="container text-center padding-top-40">
                 <h3 style="color:#000000;">My Portfolio</h3><hr class="hr-bold">
-                <div class="row">
+                <div class="row" data-aos="zoom-in" data-aos-duration="800">
                     <div class="col-md-4" ng-repeat="x in projects">
                         <a href="#" data-toggle="modal" data-target="#{{x.id}}">
                             <div class="thumbnail">
@@ -112,12 +114,12 @@
                         <h3 class="text-center">{{x.name}}</h3>
                     </div>
                     <div class="modal-body">
-                        <img src={{x.pic}} class="img-responsive"><br>
+                        <img src={{x.pic}} class="img-responsive" alt="{{x.name}} Photo"><br>
                         <div class="text-center">
-                            <a href="{{x.link}}"><button class="btn btn-default margin-bottom-10" type="button">
-                                <i class="fa fa-globe fa-fw"></i>Visit Website</button></a>
-                            <a href="{{x.git}}"><button class="btn btn-default margin-bottom-10" type="button">
-                                <i class="fa fa-github fa-fw"></i>Visit Github</button></a>
+                            <a href="{{x.link}}" class="btn btn-default margin-bottom-10">
+                                <i class="fa fa-globe fa-fw"></i>Visit Website</a>
+                            <a href="{{x.git}}" class="btn btn-default margin-bottom-10">
+                                <i class="fa fa-github fa-fw"></i>Visit Github</a>
                         </div>
                         <p style="font-size:16px;" class="text-left">{{x.description}}</p>
                     </div>
@@ -147,7 +149,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="visitorMessage">Message:</label>
-                                <textarea type="text" name="message" class="form-control" id="visitorMessage"></textarea>
+                                <textarea name="message" class="form-control" id="visitorMessage"></textarea>
                             </div>
                             <button type="submit" class="btn btn-default"><i class="fa fa-paper-plane"></i>
                                 Send Message</button>
@@ -162,6 +164,32 @@
     </div>
     <footer>
         <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h4>About Me</h4>
+                    <p>I'm a passionate web developer, based in Stanton, California.</p>
+                    <p>I'm available for an immediate start or for freelance projects.</p>
+                    <p>If you like what you’ve seen, email me at <a href="mailto:contact@tylerhuynh.com" style="color:#4169e1;">
+                        contact@tylerhuynh.com</a> or fill out the form
+                        and I'll get back to you as soon as possible.</p>
+                </div>
+                <div class="col-md-3">
+                    <h4>Blog</h4>
+                    <p>Coming Soon</p>
+                </div>
+                <div class="col-md-3" ng-repeat="t in tags">
+                    <h4>Tags</h4>
+                    <div ng-repeat="i in t.items" style="display:inline-block">
+                        <span class="label label-danger">{{i}}</span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <a href="#"><h4>Home</h4></a>
+                    <p><a href="#about"><b>About</b></a></p>
+                    <p><a href="#portfolio"><b>Portfolio</b></a></p>
+                    <p><a href="#contact"><b>Contact</b></a></p>
+                </div>
+            </div><hr>
             <div class="row text-center">
                 <div class="col-md-3">Copyright <i class="fa fa-copyright"></i> 2017 Tyler Huynh</div>
                 <div class="col-md-9">
@@ -176,7 +204,7 @@
                             <a href="#"><i class="fa fa-twitter fa-fw fa-2x"></i>Follow me on Twitter</a>
                         </div>
                         <div class="col-md-3">
-                            <a href="mailto:tylerhuynh100@gmail.com" target="_top"><i class="fa fa-envelope-o fa-fw fa-2x"></i>Email Me</a>
+                            <a href="mailto:tylerhuynh100@gmail.com"><i class="fa fa-envelope-o fa-fw fa-2x"></i>Email Me</a>
                         </div>
                     </div>
                 </div>
@@ -192,6 +220,7 @@
             });
         });
     </script>
+    <script>AOS.init()</script>
     <script async defer
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxL8qkUOMhWz7ajinm7xXhSjFCvX5zc2E&callback=initMap">
     </script>

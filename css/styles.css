@@ -10,6 +10,7 @@ html body {
 .colored-block {
     width: 100%;
     color: #d3d3d3;
+    padding-bottom: 40px;
 }
 @media only screen and (min-width: 768px) {
     /* Underline From Center */
@@ -93,11 +94,9 @@ html body {
     background: -webkit-linear-gradient(to left, #283048 , #859398); /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to left, #283048 , #859398); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
-.bg-dawn {
-    color: #d3d3d3;
-    background: #F3904F; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #F3904F , #3B4371); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #F3904F , #3B4371); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.blend-gradient {
+    background: -webkit-linear-gradient(35deg, rgb(74, 81, 86), rgb(106, 146, 168));
+    background: linear-gradient(35deg, rgb(74, 81, 86), rgb(106, 146, 168));
 }
 button {
     margin-right: 10px;
@@ -121,6 +120,10 @@ footer {
 }
 footer a {
     color: black;
+}
+footer h4 {
+    border-left: solid thick #ff4500;
+    padding-left: 10px;
 }
 .padding-top-40 {
     padding-top: 40px;
