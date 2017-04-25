@@ -1,228 +1,425 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8" />
     <title>Portfolio | Tyler Huynh - Full Stack Web Developer</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Tyler Huynh">
     <meta name="description" content="Tyler Huynh Full Stack Web Developer Portfolio">
     <meta name="keywords" content="Tyler Huynh, Web Developer, Full Stack, HTML5, CSS3, JavaScript, AngularJS, Python">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto">
-    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
-    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
-    <link rel="icon" href="images/favicon.ico">
 
     <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto|Roboto+Slab|Palanquin+Dark|Droid+Serif" rel="stylesheet">
+
     <script src="https://use.fontawesome.com/409e734741.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/gmap.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/typed.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+
+    <link rel="stylesheet" href="css/hover-min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/style2.css" />
+    <script src="js/modernizr.js"></script>
 </head>
-<body ng-app="myApp" ng-controller="myCtrl">
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+<body>
+    <nav class="navbar navbar-default" id="home-wrapper">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <button href="#" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" style="margin-top:25px;">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#"><img src="images/logo.png" class="logo img-responsive" alt="Logo"></a>
+                <a class="navbar-brand" href="#"><img src="images/logo.png"/></a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#about" class="hvr-underline-from-center">About</a></li>
-                    <li><a href="#portfolio" class="hvr-underline-from-center">Portfolio</a></li>
-                    <li><a href="#contact" class="hvr-underline-from-center">Contact</a></li>
-                    <li><a href="files/resume.pdf" class="hvr-underline-from-center">Resume</a></li>
+                    <li class="active"><a href="#">HOME</a></li>
+                    <li><a href="#skills">SKILLS</a></li>
+                    <li><a href="#portfolio">PORTFOLIO</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
                 </ul>
+            </div>
+            <div class="row greeting">
+                <h1>Hi, my name is Tyler.</h1>
+                <p>I'm a passionate full stack web developer.</p>
+            </div>
+            <div class="lm-div">
+                <a class="learn-btn" href="#skills">Learn more <i class="fa fa-angle-double-right"></i></a>
             </div>
         </div>
     </nav>
-    <div>
-        <!-- About Section -->
-        <section class="colored-block blend-gradient">
-            <div id="about" class="container text-center">
-                <h1 class="greeting margin-top-75 margin-bottom-65">
-                    <span style="color:#ffA500;">Hi,</span> my name is <span style="color:#01579b;">Tyler</span><br>
-                    <span class="element"></span>
-                </h1>
-                <div class="row">
-                    <div class="col-xs-3 col-sm-4 col-md-5"></div>
-                    <div class="col-xs-6 col-sm-4 col-md-2 margin-bottom-25">
-                        <img src="images/tan.jpg" alt="Profile Pic" class="img-circle img-responsive">
-                    </div>
-                    <div class="col-xs-3 col-sm-4 col-md-5"></div>
+    <section id="skills">
+        <div class="container">
+            <h2 class="big-title"><span class="border">SKI</span>LLS</h2>
+            <div class="row mtop-100px">
+                <div class="col-md-4 text-center">
+                    <p class="skill-type">Front-end</p>
+                    <p>HTML/CSS</p>
+                    <ul>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                    </ul>
+                    <p>JAVASCRIPT</p>
+                    <ul>
+                        <li>ES6</li>
+                        <li>AngularJS</li>
+                        <li>jQuery</li>
+                        <li>AJAX</li>
+                    </ul>
+                    <p>FRAMEWORKS</p>
+                    <ul>
+                        <li>Bootstrap</li>
+                    </ul>
                 </div>
-                <div class="row">
-                    <div class="col-md-12 intro">
-                        <p><sup><i class="fa fa-quote-left"></i></sup>
-                            Hi, my name is Tyler Huynh. I'm a passionate web developer with knowledge
-                            in both front-end and back-end development. I love learning new things,
-                            working with new technologies, and tackling new challenges everyday.
-                            In my free time, I enjoy traveling, reading books, and everything about
-                            the Cosmos.
-                            <sup><i class="fa fa-quote-right"></i></sup></p>
-                    </div>
+                <div class="col-md-4 text-center">
+                    <p class="skill-type">Back-end</p>
+                    <p>LANGUAGES</p>
+                    <ul>
+                        <li>PHP</li>
+                        <li>Python</li>
+                    </ul>
+                    <p>DATABASES</p>
+                    <ul>
+                        <li>MySQLi</li>
+                    </ul>
                 </div>
-                <!-- Skills -->
-                <div class="row margin-bottom-15">
-                    <h3>What I'm Good At</h3><hr class="hr-bold">
-                    <div class="hvr-float-shadow col-xs-3 col-sm-3 col-md-3 margin-bottom-10" ng-repeat="x in skills">
-                        <i class="fa {{x.faName}} fa-2x" style="color:{{x.faColor}}"></i><br>
-                        <i class="fa fa-caret-down"></i><br>
-                        <strong>{{x.name}}</strong>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Portfolio Section -->
-        <section class="colored-block bg-grey">
-            <div id="portfolio" class="container text-center padding-top-40">
-                <h3 style="color:#000000;">My Portfolio</h3><hr class="hr-bold">
-                <div class="row" data-aos="zoom-in" data-aos-duration="800">
-                    <div class="col-md-4" ng-repeat="x in projects">
-                        <a href="#" data-toggle="modal" data-target="#{{x.id}}">
-                            <div class="thumbnail">
-                                <div class="thumbnail-img"><img src={{x.pic}} alt="{{x.name}} Project Image" class="img-responsive"></div>
-                                <hr>
-                                <h5 class="text-center">{{x.name}}</h5>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Open a pop up window when a project was clicked -->
-        <div id={{x.id}} class="modal fade" role="dialog" ng-repeat="x in projects">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true"><i class="fa fa-times"></i></span>
-                        </button>
-                        <h3 class="text-center">{{x.name}}</h3>
-                    </div>
-                    <div class="modal-body">
-                        <img src={{x.pic}} class="img-responsive" alt="{{x.name}} Photo"><br>
-                        <div class="text-center">
-                            <a href="{{x.link}}" class="btn btn-default margin-bottom-10">
-                                <i class="fa fa-globe fa-fw"></i>Visit Website</a>
-                            <a href="{{x.git}}" class="btn btn-default margin-bottom-10">
-                                <i class="fa fa-github fa-fw"></i>Visit Github</a>
-                        </div>
-                        <p style="font-size:16px;" class="text-left">{{x.description}}</p>
-                    </div>
-                    <div class="modal-footer">
-                        <div style="display:inline-block;" ng-repeat="t in x.tools">
-                            <span class="label label-success" style="color:#000000;">{{t}}</span>
-                        </div>
-                    </div>
+                <div class="col-md-4 text-center">
+                    <p class="skill-type">Other</p>
+                    <p>OTHER</p>
+                    <ul>
+                        <li>Git/Github</li>
+                        <li>Grunt</li>
+                        <li>Linux</li>
+                        <li>Apache</li>
+                        <li>SEO</li>
+                        <li>Google Analytics</li>
+                        <li>APIs</li>
+                    </ul>
                 </div>
             </div>
         </div>
-
-        <!-- Contact Section -->
-        <section class="colored-block bg-titanium">
-            <div id="contact" class="container text-center padding-top-40">
-                <h3>Contact Me</h3><hr class="hr-bold">
-                <div class="row margin-bottom-15">
-                    <div class="col-md-6 text-left">
-                        <form method="POST" action="http://formspree.io/tylerhuynh100@gmail.com">
-                            <div class="form-group">
-                                <label for="visitorName">Name:</label>
-                                <input type="text" name="name" class="form-control" id="visitorName">
-                            </div>
-                            <div class="form-group">
-                                <label for="visitorEmail">Email:</label>
-                                <input type="email" name="email" class="form-control" id="visitorEmail">
-                            </div>
-                            <div class="form-group">
-                                <label for="visitorMessage">Message:</label>
-                                <textarea name="message" class="form-control" id="visitorMessage"></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-default"><i class="fa fa-paper-plane"></i>
-                                Send Message</button>
-                        </form>
-                    </div>
-                    <div class="col-md-6 margin-bottom-15">
-                        <div id="map"></div>
-                    </div>
+    </section>
+    <section id="portfolio">
+        <div class="container">
+            <h2 class="big-title"><span class="border">POR</span>TFOLIO</h2>
+            <div class="row mtop-100px">
+                <div class="col-md-4 mleft-150px">
+                    <img class="img-responsive" src="images/iloannow.png" alt="iloannow Project Photo" />
+                </div>
+                <div class="col-md-4 col-md-offset-1">
+                    <h3>Superior Real Estate Group</h3>
+                    <p>
+                        Superior Real Estate Group provides a comprehensive range of services
+                         to help clients procure new homes, refinance their existing mortgages
+                          as well as offers mortgage solutions for real estate investors. With
+                           nearly 200+ active real estate agents closing hundreds of transactions
+                            each year, SREG is one of the top 10 largest real estate offices in
+                             Orange County and the #1 office of L.S. for 8 straight years in a row.
+                    </p>
+                    <p>
+                        <span class="label label-danger">HTML5</span>
+                        <span class="label label-danger">CSS3</span>
+                        <span class="label label-danger">JavaScript</span>
+                        <span class="label label-danger">jQuery</span>
+                        <span class="label label-danger">Ajax</span>
+                        <span class="label label-danger">PHP</span>
+                        <span class="label label-danger">MySQLi</span>
+                    </p>
+                    <p style="margin-top:40px;">
+                        <a class="link-project" href="https://iloannow.com">Visit Website</a>
+                    </p>
                 </div>
             </div>
-        </section>
-    </div>
-    <footer>
+            <hr />
+            <div class="row">
+                <div class="col-md-4 mleft-150px col-md-push-5">
+                    <img class="img-responsive" src="images/broadway.png" alt="Broadway Project Photo" />
+                </div>
+                <div class="col-md-4 col-md-offset-1 col-md-pull-4">
+                    <h3>Broadway</h3>
+                    <p>
+                        Broadway is a fictional web design company. It is a project
+                          I did in my free time to sharpen my professional skills.
+                    </p>
+                    <p>
+                        <span class="label label-danger">HTML5</span>
+                        <span class="label label-danger">CSS3</span>
+                        <span class="label label-danger">Bootstrap</span>
+                        <span class="label label-danger">jQuery</span>
+                    </p>
+                    <p style="margin-top:40px;">
+                        <a class="link-project" href="https://thuynh8.github.io/broadway/">Visit Website</a>
+                        <a class="link-project" href="https://github.com/thuynh8/broadway">Visit Github</a>
+                    </p>
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-md-4 mleft-150px">
+                    <img class="img-responsive" src="images/map.png" alt="Map Project Photo" />
+                </div>
+                <div class="col-md-4 col-md-offset-1">
+                    <h3>Neighborhood Map</h3>
+                    <p>
+                        A single-page web application, built using the Knockout.js framework, that displays
+                         a Google Map of an area and various points of interest. Users
+                          can search all included landmarks and, when selected, additional
+                           information about a landmark is presented from the Yelp APIs.
+                    </p>
+                    <p>
+                        <span class="label label-danger">JavaScript</span>
+                        <span class="label label-danger">Knockout.js</span>
+                        <span class="label label-danger">Google Map API</span>
+                        <span class="label label-danger">Yelp API</span>
+                    </p>
+                    <p style="margin-top:40px;">
+                        <a class="link-project" href="https://neighborhood-google-map.herokuapp.com/">Visit Website</a>
+                        <a class="link-project" href="https://github.com/thuynh8/neighborhood-map">Visit Github</a>
+                    </p>
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-md-4 mleft-150px col-md-push-5">
+                    <img class="img-responsive" src="images/catalog.png" alt="Catalog Project Photo" />
+                </div>
+                <div class="col-md-4 col-md-offset-1 col-md-pull-4">
+                    <h3>Item Catalog</h3>
+                    <p>
+                        Developed a Content Management System using the Flask framework in Python. Authentication is provided via Google and Facebook OAuth and all data is stored within a PostgreSQL database.
+                    </p>
+                    <p>
+                        <span class="label label-danger">Python</span>
+                        <span class="label label-danger">Flask</span>
+                        <span class="label label-danger">SQL</span>
+                        <span class="label label-danger">Oauth2</span>
+                    </p>
+                    <p style="margin-top:40px;">
+                        <a class="link-project" href="https://catalog-2016.herokuapp.com/">Visit Website</a>
+                        <a class="link-project" href="https://github.com/thuynh8/catalog-project">Visit Github</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <div class="big-title" style="color:#343434;padding-bottom:30px;margin-top:12px;"><span class="border">ABO</span>UT</div>
+        <div id="cd-timeline" class="cd-container">
+    		<div class="cd-timeline-block">
+    			<div class="cd-timeline-img">
+    				<img src="images/flag.svg" alt="American Flag">
+    			</div>
+    			<div class="cd-timeline-content">
+    				<h2>Arrival</h2>
+    				<p>
+                        <ul>
+                            <li>
+                                My family immigrated to the U.S.
+                            </li>
+                            <li>
+                                Started chasing the American dream.
+                            </li>
+                        </ul>
+                    </p>
+    				<span class="cd-date">2008</span>
+    			</div>
+    		</div>
+
+    		<div class="cd-timeline-block">
+    			<div class="cd-timeline-img">
+    				<img src="images/glidewell.jpg" alt="Glidewell Logo">
+    			</div>
+    			<div class="cd-timeline-content">
+    				<h2>First Ever Job</h2>
+    				<p>
+                        <ul>
+                            <li>
+                                Began working for Glidewell Laboratories.
+                            </li>
+                            <li>
+                                Learned a great deal about Dental Restorations...and grandma's dentures.
+                            </li>
+                        </ul>
+                         </p>
+    				<span class="cd-date">2008</span>
+    			</div>
+    		</div>
+
+    		<div class="cd-timeline-block">
+    			<div class="cd-timeline-img">
+    				<img src="images/csulb.jpg" alt="CSULB Logo">
+    			</div>
+    			<div class="cd-timeline-content">
+    				<h2>College</h2>
+    				<p>
+                        <ul>
+                            <li>
+                                Started pursuing a college degree. Planned to study for 3 yrs 4 months then dropped out to become the next Steve Jobs.
+                            </li>
+                            <li>
+                                Plan didn't go well. Mom figured it out so had to finish off the 4-year degree.
+                            </li>
+                            <li>
+                                Graduated with honors (Information Systems, B.S., magna cum laude).
+                            </li>
+                        </ul>
+                    </p>
+    				<span class="cd-date">2009-2016</span>
+    			</div>
+    		</div>
+
+    		<div class="cd-timeline-block">
+    			<div class="cd-timeline-img">
+    				<img src="images/ship.svg" alt="Ship">
+    			</div>
+    			<div class="cd-timeline-content">
+    				<h2>Fresh Out Of College</h2>
+    				<p>
+                        <ul>
+                            <li>
+                                Worked for Develing International as a Logistics Coordinator.
+                            </li>
+                            <li>
+                                Learned a lot about the Food Industry
+                                and International Logistics.
+                            </li>
+                            <li>
+                                Witnessed the bankruptcy of Hanjin Shipping Line.
+                            </li>
+                            <li>
+                                Started developing interests in web development.
+                            </li>
+                        </ul>
+                    </p>
+    				<span class="cd-date">07/2016 - 01/2017</span>
+    			</div>
+    		</div>
+
+    		<div class="cd-timeline-block">
+    			<div class="cd-timeline-img">
+    				<img src="images/udacity.svg" alt="Udacity">
+    			</div>
+    			<div class="cd-timeline-content">
+    				<h2>Udacity</h2>
+    				<p>
+                        <ul>
+                            <li>
+                                Completed Udacity Full Stack Web Developer Nanodegree.
+                            </li>
+                        </ul>
+                    </p>
+    				<span class="cd-date">07/2016 - 11/2016</span>
+    			</div>
+    		</div>
+
+    		<div class="cd-timeline-block">
+    			<div class="cd-timeline-img">
+    				<img src="images/programming.svg" alt="Programming">
+    			</div>
+    			<div class="cd-timeline-content">
+    				<h2>Becoming a Web Developer</h2>
+    				<p>
+                        <ul>
+                            <li>
+                                Currently working for Superior Real Estate Group as a Full Stack Web Developer.
+                            </li>
+                            <li>
+                                Have built awesome websites
+                                and really enjoy the life as a web developer.
+                            </li>
+                            <li>
+                                Now looking for more excited projects and new challenges.
+                            </li>
+                        </ul>
+                    </p>
+    				<span class="cd-date">02/2017 - Present</span>
+    			</div>
+    		</div>
+            <div class="cd-timeline-block">
+    			<div class="cd-timeline-img">
+    				<img src="images/ufo.svg" alt="Udacity">
+    			</div>
+    			<div class="cd-timeline-content">
+    				<h2>Future</h2>
+    				<p>
+                        <ul>
+                            <li>
+                                Make an impact. Leave a footprint. Change the whole world.
+                            </li>
+                            <li>
+                                Want to be a part of my story? Hire Me!
+                            </li>
+                        </ul>
+                    </p>
+    				<span class="cd-date">+&infin;</span>
+    			</div>
+    		</div>
+        </div>
+	</section>
+    <footer id="contact">
         <div class="container">
             <div class="row">
-                <div class="col-md-3">
-                    <h4>About Me</h4>
-                    <p>I'm a passionate web developer, based in Stanton, California.</p>
-                    <p>I'm available for an immediate start or for freelance projects.</p>
-                    <p>If you like what you’ve seen, email me at <a href="mailto:contact@tylerhuynh.com" style="color:#4169e1;">
-                        contact@tylerhuynh.com</a> or fill out the form
-                        and I'll get back to you as soon as possible.</p>
+                <div class="col-md-6 text-center left-col">
+                    <img class="img-responsive" src="images/tyler.png" />
+                    <a href="files/resume.pdf" class="resume-link">View My Resume</a>
+                    <p>
+                        <a href="https://www.linkedin.com/in/tylerhuynh"><i class="fa fa-linkedin fa-2x fa-fw"></i></a>
+                        <a href="https://github.com/thuynh8"><i class="fa fa-github fa-2x fa-fw"></i></a>
+                        <a href="mailto:ctylerhuynh@gmail.com"><i class="fa fa-envelope fa-2x fa-fw"></i></a>
+                    </p>
                 </div>
-                <div class="col-md-3">
-                    <h4>Blog</h4>
-                    <p>Coming Soon</p>
+                <div class="hr-line">
+                    <hr />
                 </div>
-                <div class="col-md-3" ng-repeat="t in tags">
-                    <h4>Tags</h4>
-                    <div ng-repeat="i in t.items" style="display:inline-block">
-                        <span class="label label-danger">{{i}}</span>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <a href="#"><h4>Home</h4></a>
-                    <p><a href="#about"><b>About</b></a></p>
-                    <p><a href="#portfolio"><b>Portfolio</b></a></p>
-                    <p><a href="#contact"><b>Contact</b></a></p>
-                </div>
-            </div><hr>
-            <div class="row text-center">
-                <div class="col-md-3">Copyright <i class="fa fa-copyright"></i> 2017 Tyler Huynh</div>
-                <div class="col-md-9">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <a href="https://github.com/thuynh8"><i class="fa fa-github-alt fa-fw fa-2x"></i>Find me on Github</a>
+                <div class="col-md-5">
+                    <h3>Get in Touch</h3>
+                    <form method="post" action="http://formspree.io/tylerhuynh100@gmail.com">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input class="form-control transparent-input" placeholder="Name" name="name" />
+                            </div>
+                            <div class="col-md-6">
+                                <input class="form-control transparent-input" placeholder="Email" name="email" />
+                            </div>
                         </div>
-                        <div class="col-md-3">
-                            <a href="https://www.linkedin.com/in/tylerhuynh"><i class="fa fa-linkedin fa-fw fa-2x"></i>View my LinkedIn profile</a>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <input class="form-control transparent-input" placeholder="Subject" style="margin-top:10px;" />
+                            </div>
                         </div>
-                        <div class="col-md-3">
-                            <a href="#"><i class="fa fa-twitter fa-fw fa-2x"></i>Follow me on Twitter</a>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <textarea class="form-control transparent-input" placeholder="Message" style="margin-top:10px;" rows="5" name="message"></textarea>
+                            </div>
                         </div>
-                        <div class="col-md-3">
-                            <a href="mailto:tylerhuynh100@gmail.com"><i class="fa fa-envelope-o fa-fw fa-2x"></i>Email Me</a>
+                        <div class="row text-center">
+                            <button class="send-btn" type="submit">Send</button>
                         </div>
-                    </div>
+                    </form>
                 </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="copyright-section">
+                <p>
+                    Copyright 2017 <i class="fa fa-copyright fa-fw"></i> Tyler Huynh. All rights reserved.
+                </p>
             </div>
         </div>
     </footer>
-    <script>
-        $(function(){
-            $(".element").typed({
-                strings: ["I'm a <span style='color:#263238;'>Full Stack Web Developer</span> ^500",
-                    "Welcome to <span style='color:#b71c1c;'>My Page</span>"],
-                typeSpeed: 1
-            });
-        });
-    </script>
-    <script>AOS.init()</script>
-    <script async defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxL8qkUOMhWz7ajinm7xXhSjFCvX5zc2E&callback=initMap">
-    </script>
+    <script src="js/matchHeight.js"></script>
+    <script src="js/progressbar.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
